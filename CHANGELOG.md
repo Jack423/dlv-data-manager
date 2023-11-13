@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0 (2023-11-13)
+
+
+### Bug Fixes
+
+* Add missing files back into repo ([264e571](https://github.com/Jack423/dlv-data-manager/commit/264e571eafc248a3f2982ffd60607bf110a7da35))
+* add pom back to project ([f9d1ee4](https://github.com/Jack423/dlv-data-manager/commit/f9d1ee4e67cc55b771e88dd129cb1ffae7932239))
+* Add updated gitignore and other base project files ([7689638](https://github.com/Jack423/dlv-data-manager/commit/76896385e10c596f462f9cfb19a0c564d65670a3))
+
 ## 1.0.0 (2023-11-12)
 
 
