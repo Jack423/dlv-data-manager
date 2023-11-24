@@ -1,6 +1,5 @@
 package io.apexapps.dlvdatamanager.views.allothercraftingitems;
 
-import com.github.javaparser.utils.Utils;
 import com.vaadin.flow.component.AbstractField;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.UI;
@@ -21,6 +20,7 @@ import io.apexapps.dlvdatamanager.components.CraftingRecipeList;
 import io.apexapps.dlvdatamanager.data.entity.CraftingItem;
 import io.apexapps.dlvdatamanager.data.service.CraftingItemService;
 import io.apexapps.dlvdatamanager.utils.NotificationUtil;
+import io.apexapps.dlvdatamanager.utils.StringUtils;
 import io.apexapps.dlvdatamanager.views.MainLayout;
 import lombok.extern.slf4j.Slf4j;
 
@@ -97,7 +97,7 @@ public class EditCraftingItem extends Composite<VerticalLayout> implements Befor
     private void onNameChanged(AbstractField.ComponentValueChangeEvent event) {
         final var value = String.format(
                 CRAFTING_ITEM_ICON_FORMAT,
-                type.getValue() == null ? "" : Utils.screamingToCamelCase(type.getValue().toString()),
+                type.getValue() == null ? "" : StringUtils.screamingToCamelCase(type.getValue().toString()),
                 event.getValue().toString().replaceAll(" ", "_")
         );
 
@@ -108,7 +108,7 @@ public class EditCraftingItem extends Composite<VerticalLayout> implements Befor
     private void onTypeChanged(AbstractField.ComponentValueChangeEvent event) {
         final var value = String.format(
                 CRAFTING_ITEM_ICON_FORMAT,
-                Utils.screamingToCamelCase(event.getValue().toString()),
+                StringUtils.screamingToCamelCase(event.getValue().toString()),
                 name.getValue() == null ? "" : name.getValue().replaceAll(" ", "_")
         );
 

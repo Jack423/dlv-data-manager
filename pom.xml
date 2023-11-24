@@ -3,22 +3,22 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/project/67d8d8f5-955f-4997-81d1-f36f706ff5d3 -->
     <groupId>io.apexapps.dlvdatamanager</groupId>
-    <artifactId>dlvdatamanager</artifactId>
-    <name>dlvdatamanager</name>
+    <artifactId>dlv-data-manager</artifactId>
+    <name>dlv-data-manager</name>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <properties>
-        <java.version>19</java.version>
+        <java.version>17</java.version>
         <vaadin.version>24.1.4</vaadin.version>
         <selenium.version>4.10.0</selenium.version>
-        <lombok.version>1.18.28</lombok.version>
+        <lombok.version>1.18.30</lombok.version>
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.5</version>
     </parent>
 
     <repositories>
@@ -105,13 +105,34 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>true</filtering>
+                <targetPath>../</targetPath>
+                <includes>
+                    <include>artifact.txt</include>
+                    <include>version.txt</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>false</filtering>
+                <targetPath>.</targetPath>
+                <excludes>
+                    <exclude>artifact.txt</exclude>
+                    <exclude>version.txt</exclude>
+                </excludes>
+            </resource>
+        </resources>
         <defaultGoal>spring-boot:run</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5410</jvmArguments>
+                    <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5287</jvmArguments>
                     <wait>500</wait>
                     <maxAttempts>240</maxAttempts>
                 </configuration>
@@ -213,6 +234,5 @@
                 </plugins>
             </build>
         </profile>
-
     </profiles>
 </project>
