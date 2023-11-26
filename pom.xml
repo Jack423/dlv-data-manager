@@ -5,7 +5,7 @@
     <groupId>io.apexapps.dlvdatamanager</groupId>
     <artifactId>dlv-data-manager</artifactId>
     <name>dlv-data-manager</name>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
