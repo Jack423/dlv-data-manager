@@ -16,6 +16,7 @@ import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.splitlayout.SplitLayout;
+import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
@@ -52,7 +53,7 @@ public class EditCharacterView extends Composite<VerticalLayout> implements Befo
     private Binder<Character> characterBinder;
     private VerticalLayout questsViewLayout = new VerticalLayout();
     private TextField questName = new TextField("Quest Name");
-    private TextField questDescription = new TextField("Quest Description");
+    private final TextArea questDescription = new TextArea("Quest Description");
     private ComboBox<Character.QuestCategory> questCategory = new ComboBox<>("Category");
     private Character.Quest selectedQuest = new Character.Quest();
     private final QuestRequiredItems questRequiredItems = new QuestRequiredItems();
