@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.1](https://github.com/Jack423/dlv-data-manager/compare/v1.0.0...v1.0.1) (2023-11-26)
+
+
+### Features
+
+* Make the quest description into a TextArea ([b7e6fe0](https://github.com/Jack423/dlv-data-manager/commit/b7e6fe071ce26040616f58bba76076ebd36b887b))
+
+
+### Bug Fixes
+
+* Fix project to work with docker and CI ([a21c57f](https://github.com/Jack423/dlv-data-manager/commit/a21c57f830e736dee54ed0f5804099eec062cb17))
+
+
+### Miscellaneous Chores
+
+* release 1.0.1 ([0d017c6](https://github.com/Jack423/dlv-data-manager/commit/0d017c6b9137d3ba43fa364f39cd8bdc8f3170f8))
+
 ## 1.0.0 (2023-11-13)
 
 
